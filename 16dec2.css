@@ -1,0 +1,132 @@
+body{
+    background: linear-gradient(45deg,#00bcd4,#ffeb3b);
+}
+/* Basic card styles */
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;px;
+    height:100vh;
+}
+.card {
+    width: 200px;
+    
+    
+    background-color: #fff;
+    border-radius: 10px;
+    border:2px solid #009688;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card image */
+  .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
+    transition:transform 0.3s ease;
+    position: relative;
+    object-fit:scale-down;
+    z-index: 1;
+  }
+  .card:hover .card-image{
+    transform:translateY(-50px);
+  }
+  
+  /* Card content */
+  .card-content {
+    padding: 20px;
+    transition: transform 0.3s ease;
+    color:#000;
+  }
+  
+  
+  .card:hover .card-content {
+    transform: translateY(-20px);
+  }
+  
+  h2,
+  p {
+    margin-bottom: 10px;
+  }
+  
+  /* Read more button */
+  .read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    background-clip: text;
+    border:none;
+    z-index: 3;
+  }
+  
+  .read-more:hover {
+    background-color: #555;
+  }
+  /* Hover effect */
+.card:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Interactive effect between cards */
+  .card:hover + .card {
+    transform: translateX(20px);
+  }
+  
+  .card:hover ~ .card {
+    transform: translateX(-20px);
+  }
+
+
+  .navbar{
+    width: 100%;
+    padding: 10px 20px 30px 10px;
+    margin: auto;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+    
+    
+}
+
+
+
+
+
+  .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    right: 50px;
+    margin-right: auto;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    margin-right: auto;
+}
+li a:hover{
+    background: white;
+    transition: 0.6s;
+}
+.navbar a:hover{
+    color: black;
+}
+
+
+
+  
